@@ -1,6 +1,6 @@
 {
   "name": "tapout",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Tap output stream",
   "main": "tapout.js",
   "scripts": {
@@ -22,8 +22,7 @@
     "url": "https://github.com/sonewman/tapout/issues"
   },
   "homepage": "https://github.com/sonewman/tapout",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^2.12.3"
   }
