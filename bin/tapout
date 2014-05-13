@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var Tapout = require('tapout')
+
+process.stdin
+  .pipe(new Tapout())
+  .pipe(process.stdtout)
+

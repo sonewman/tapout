@@ -1,0 +1,30 @@
+{
+  "name": "tapout",
+  "version": "0.0.0",
+  "description": "Tap output stream",
+  "main": "tapout.js",
+  "scripts": {
+    "test": "tape ./test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sonewman/tapout.git"
+  },
+  "keywords": [
+    "tap",
+    "test anywhere protocol",
+    "test",
+    "stream"
+  ],
+  "author": "Sam Newman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonewman/tapout/issues"
+  },
+  "homepage": "https://github.com/sonewman/tapout",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tape": "^2.12.3"
+  }
+}
