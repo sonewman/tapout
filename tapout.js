@@ -91,7 +91,7 @@ function flush_() {
 }
 
 function span(total) {
-  return total > 1
+  return total > 0
     ? '1..' + total + '\n'
     : '0\n'
 }
