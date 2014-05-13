@@ -16,7 +16,7 @@ var testResults = [
   {
     name: 'my first failing test'
     , results: [
-      { 
+      {
         name: 'assert was correct'
         , ok: false
         , error: testError
@@ -47,9 +47,9 @@ test('Parse erroneous test', function (t) {
       case 0:
         t.equals(d, 'TAP version 13\n')
         break
-  
+
       case 1:
-        t.equals(d, 
+        t.equals(d,
           '# my first failing test\n'
           + 'not ok 1 assert was correct\n  ---\n'
           + '    file:   my-file.js\n'
@@ -63,7 +63,7 @@ test('Parse erroneous test', function (t) {
       case 2:
         t.equals(d, '# my second test\nok 3 assert as right\n')
         break
-      
+
       case 3:
         t.equals(d, '\n1..3\n# tests 3\n# pass  2\n# fail  1\n\n# not ok\n\n')
         t.end()
@@ -81,5 +81,5 @@ test('Parse erroneous test', function (t) {
   })
 
   tap.end()
-  
+
 })
