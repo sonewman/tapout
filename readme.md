@@ -2,6 +2,11 @@
 
 Streaming Tap (Test Anywhere Protocol) output
 
+Install:
+```bash
+$ npm i tapout
+```
+
 Give write spec objects to tapout and get streaming tap output.
 
 A successful test object with two assertions:
@@ -22,7 +27,7 @@ tap.write({
 tap.end()
 ```
 output:
-```sh
+```bash
 $ node my-test.js
 TAP version 13
 # my first test
@@ -55,8 +60,10 @@ tap.end({
   ]
 })
 ```
-
-on 13
+output:
+```bash
+$ node my-failing-test.js
+TAP version 13
 # my only failing test
 not ok 1 assert was correct
   ---
