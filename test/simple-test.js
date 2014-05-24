@@ -35,7 +35,7 @@ test('Parse fully successful test', function (t) {
       case 0:
         t.equals(d, 'TAP version 13\n')
         break
-  
+
       case 1:
         t.equals(d, '# my first test\nok 1 assert was correct\nok 2 assert was true\n')
         break
@@ -43,7 +43,7 @@ test('Parse fully successful test', function (t) {
       case 2:
         t.equals(d, '# my second test\nok 3 assert as right\n')
         break
-      
+
       case 3:
         t.equals(d, '# my third test\nok 4 assert another correct value\n')
         break
@@ -64,5 +64,5 @@ test('Parse fully successful test', function (t) {
   })
 
   tap.end()
-  
+
 })

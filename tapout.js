@@ -57,7 +57,7 @@ function transform_(test, enc, next) {
       error = null
     }
   }
-  
+
   output.push('')
   next(null, output.join('\n'))
 }
@@ -65,7 +65,7 @@ function transform_(test, enc, next) {
 TapOut.prototype._flush = flush_
 function flush_() {
   var endOutput = ['\n']
-  
+
   // add the span of the tests
   // e.g. 1..10
   endOutput.push(span(this._total))
@@ -73,7 +73,7 @@ function flush_() {
   // add the total tests
   // e.g. # tests 10
   endOutput.push(totalTests(this._total))
-  
+
   // add the total passes
   // e.g. # pass 9
   endOutput.push(totalPasses(this._count))
@@ -81,11 +81,11 @@ function flush_() {
   // add the total failures
   // e.g. # fail 1
   endOutput.push(totalFails(this._count, this._total))
-  
+
   // give end result
   // e.g. # ok
   endOutput.push(result(this._count, this._total))
-  
+
   this.push(endOutput.join(''))
   this.push(null)
 }
@@ -101,7 +101,7 @@ function totalTests(total) {
 }
 
 function totalPasses(count) {
-  return count > 0 
+  return count > 0
     ? '# pass  ' + count + '\n'
     : ''
 }
@@ -119,8 +119,8 @@ function result(count, total) {
 
 function formatError(result) {
   var errorOutput = ['  ---']
-  
-  if ('string' === typeof result.file) 
+
+  if ('string' === typeof result.file)
     errorOutput.push(formatFile(result.file))
 
   if ('number' === typeof result.line)
@@ -131,7 +131,7 @@ function formatError(result) {
 
   if (result.error && result.error.stack)
     errorOutput.push(formatStack(result.error.stack))
-  
+
   // we have no errors to output
   if (errorOutput.length === 1)
     errorOutput.push('    error:   unknown')
@@ -159,7 +159,7 @@ function formatStack(stack) {
 
   for (var i = 0; i < st.length; i++)
     output.push(st[i].replace(/at/, '-'))
-  
+
   return output.join('\n  ')
 }
 
