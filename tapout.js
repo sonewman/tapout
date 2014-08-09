@@ -17,9 +17,6 @@ function TapOut(options) {
 
 inherits(TapOut, Transform)
 
-function outputHeader(stream, hasHeader) {
-}
-
 TapOut.prototype._transform = transform_
 function transform_(test, enc, next) {
   var results = test.results || []
