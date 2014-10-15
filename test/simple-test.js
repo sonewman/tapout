@@ -11,6 +11,10 @@ var testResults = [
     ]
   }
   , {
+    name: 'my pending test'
+    , pending: true
+  }
+  , {
     name: 'my second test'
     , results: [
       { name: 'assert as right', ok: true }
@@ -31,6 +35,7 @@ test('Parse fully successful test', function (t) {
   var output = new stream.Writable({ objectMode: true })
   output._write = function (data, enc, next) {
     var d = data.toString()
+
     switch (count++) {
       case 0:
         t.equals(d, 'TAP version 13\n')

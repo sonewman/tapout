@@ -19,6 +19,11 @@ inherits(TapOut, Transform)
 
 TapOut.prototype._transform = transform_
 function transform_(test, enc, next) {
+  if (test.pending) {
+    next()
+    return
+  }
+
   var results = test.results || []
   var result
   var rs
